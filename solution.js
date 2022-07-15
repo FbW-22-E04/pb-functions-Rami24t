@@ -89,5 +89,24 @@ function isEqualNumXandO(aString){
 aString = aString.toLowerCase();
 return countOccurrences(aString,'x')===countOccurrences(aString, 'o');
 }
-
 console.log(isEqualNumXandO("ooxx"),isEqualNumXandO("xooxx"), isEqualNumXandO("ooxXm"),isEqualNumXandO("zpzpzpp"), isEqualNumXandO("zzoo"));
+
+
+// 12. isPrime? Create a function that returns true if a number is a prime number, and false if it's not. NB: a prime number is any positive integer greater than 1, which is only evenly divisible by two divisors: itself and 1. The first ten prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29.
+
+function isPrime(num){
+if(num<2)
+return false;
+else if(num>2)
+for(i=2;i<num;i++)
+{
+if(num%i===0)
+return false;
+}
+return true;
+}
+console.log(
+    isPrime(7),
+    isPrime(9),
+    isPrime(10),);
+
