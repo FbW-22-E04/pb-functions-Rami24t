@@ -116,4 +116,4 @@ anEmail = anEmail.toString().trim();
 return anEmail.indexOf('.')>0&&anEmail.indexOf('@')<anEmail.lastIndexOf('.')&&countOccurrences(anEmail,'@')===1&&anEmail.indexOf('@')>0&& anEmail.lastIndexOf('.')<anEmail.length-2&&anEmail[anEmail.indexOf('@')+1]!='.'&&anEmail[anEmail.indexOf('@')-1]!='.'&&anEmail[anEmail.indexOf('.')+1]!='.'&&anEmail[anEmail.indexOf('.')-1]!='.'&&anEmail[anEmail.lastIndexOf('.')+1]!='.'&&anEmail[anEmail.lastIndexOf('.')-1]!='.'
 }
 
-console.log(isValidEmail("j@example.com"),isValidEmail("@example.com"),isValidEmail("john.smith@com"),isValidEmail("john.smith@email.com"),isValidEmail("john..smith@email.com"),isValidEmail("john.@email.com"),isValidEmail("john@.email.com"));
+console.log('\n',isValidEmail("j@example.com"),isValidEmail("@example.com"),'\n',isValidEmail("john.smith@com"),isValidEmail("john.smith@email.com"),'\n',isValidEmail("john..smith@email.com"),isValidEmail("john.@email.com"),isValidEmail("john@.email.com"));
