@@ -93,7 +93,6 @@ console.log(isEqualNumXandO("ooxx"),isEqualNumXandO("xooxx"), isEqualNumXandO("o
 
 
 // 12. isPrime? Create a function that returns true if a number is a prime number, and false if it's not. NB: a prime number is any positive integer greater than 1, which is only evenly divisible by two divisors: itself and 1. The first ten prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23 and 29.
-
 function isPrime(num){
 if(num<2)
 return false;
@@ -110,3 +109,11 @@ console.log(
     isPrime(9),
     isPrime(10),);
 
+//13. Validate Email. Create a function that takes a string, checks for valid email address syntax, and then returns either true or false accordingly.
+
+function isValidEmail(anEmail){
+anEmail = anEmail.toString().trim();
+return anEmail.indexOf('.')>0&&anEmail.indexOf('@')<anEmail.lastIndexOf('.')&&countOccurrences(anEmail,'@')===1&&anEmail.indexOf('@')>0&& anEmail.lastIndexOf('.')<anEmail.length-2&&anEmail[anEmail.indexOf('@')+1]!='.'&&anEmail[anEmail.indexOf('@')-1]!='.'&&anEmail[anEmail.indexOf('.')+1]!='.'&&anEmail[anEmail.indexOf('.')-1]!='.'&&anEmail[anEmail.lastIndexOf('.')+1]!='.'&&anEmail[anEmail.lastIndexOf('.')-1]!='.'
+}
+
+console.log(isValidEmail("j@example.com"),isValidEmail("@example.com"),isValidEmail("john.smith@com"),isValidEmail("john.smith@email.com"),isValidEmail("john..smith@email.com"),isValidEmail("john.@email.com"),isValidEmail("john@.email.com"));
