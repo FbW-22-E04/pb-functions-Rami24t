@@ -66,3 +66,11 @@ return `The snack company should provide you with ${Math.round((100-age)*snacks*
 }
 
 console.log(calcLifetimeSupply(25, 2),calcLifetimeSupply(40, 3));
+
+//9. Where's Waldo? Create a function that takes a string and returns true if Waldo is found, and false if he's not.
+
+function isWaldoHere(string){
+string = string.toLowerCase();
+return string.indexOf('waldo')>=0;
+}
+console.log(isWaldoHere("is there a wal here?"), isWaldoHere("I found you Waldo!"), isWaldoHere("Wait, don't you mean Wally?"), isWaldoHere("waldo is here"));
