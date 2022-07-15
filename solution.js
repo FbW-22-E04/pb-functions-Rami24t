@@ -112,7 +112,17 @@ console.log(
 //13. Validate Email. Create a function that takes a string, checks for valid email address syntax, and then returns either true or false accordingly.
 
 function isValidEmail(anEmail){
+
 anEmail = anEmail.toString().trim();
+
+if(countOccurrences(anEmail,'.')>3)
+{
+for(i=anEmail.indexOf('.')+1;i<anEmail.lastIndexOf('.')-1;i++)
+{
+if(anEmail[i]=='.' && anEmail[i+1]=='.')
+ return false;
+};
+}
 return anEmail.indexOf('.')>0&&anEmail.indexOf('@')<anEmail.lastIndexOf('.')&&countOccurrences(anEmail,'@')===1&&anEmail.indexOf('@')>0&& anEmail.lastIndexOf('.')<anEmail.length-2&&anEmail[anEmail.indexOf('@')+1]!='.'&&anEmail[anEmail.indexOf('@')-1]!='.'&&anEmail[anEmail.indexOf('.')+1]!='.'&&anEmail[anEmail.indexOf('.')-1]!='.'&&anEmail[anEmail.lastIndexOf('.')+1]!='.'&&anEmail[anEmail.lastIndexOf('.')-1]!='.'
 }
 
