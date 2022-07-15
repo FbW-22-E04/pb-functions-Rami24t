@@ -39,5 +39,30 @@ occurences++;
 }
 return occurences;
 }
-
 console.log(countOccurrences("this is a string", "i"));
+
+//6. X To The Power of X. Create a function that takes a base number and an exponent number and returns the calculation. NB: All test inputs will be positive integers.
+
+function calcBaseToExponent(n1, n2) {
+return n1**n2;
+}
+
+console.log(
+    calcBaseToExponent(5, 5),
+    calcBaseToExponent(10, 10),
+    calcBaseToExponent(3, 3))
+
+//7. Dog Years. Create a function which calculates how old a dog is in dog years. The function should accept one argument that is the dog's age in human years. Calculate the dog's age in dog years based on the calculation of 1 human year = 7 dog years.
+
+function dogAge(age){
+return 'Your doggo is '+age*7+' years old in dog years!';
+}
+console.log(dogAge(4));
+
+//8. A Lifetime Supply... You just won a lifetime supply of your favourite snack! The snack company needs to calculate what that actually means and how much they need to give you over your "lifetime". Create a function to help you calculate that amount for yourself to make sure you get the right amount. The function should accept two arguments: age and amount per day. The function should calculate the amount that will be consumed for the rest of your life given a constant maximum age of 100.
+
+function calcLifetimeSupply(age,snacks){
+return `The snack company should provide you with ${Math.round((100-age)*snacks*365.25).toLocaleString()} units, until you are a ripe old age of 100. Happy snacking!`;
+}
+
+console.log(calcLifetimeSupply(25, 2),calcLifetimeSupply(40, 3));
