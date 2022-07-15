@@ -74,3 +74,20 @@ string = string.toLowerCase();
 return string.indexOf('waldo')>=0;
 }
 console.log(isWaldoHere("is there a wal here?"), isWaldoHere("I found you Waldo!"), isWaldoHere("Wait, don't you mean Wally?"), isWaldoHere("waldo is here"));
+
+//10. Pie. Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+
+function isEqualSlices (a, b, c){
+return a/b>=c;
+}
+console.log( isEqualSlices(11, 5, 3), isEqualSlices(8, 3, 2) ,isEqualSlices(8, 3, 3) ,isEqualSlices(24, 12, 2)  )
+
+
+// 11. XO Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
+
+function isEqualNumXandO(aString){
+aString = aString.toLowerCase();
+return countOccurrences(aString,'x')===countOccurrences(aString, 'o');
+}
+
+console.log(isEqualNumXandO("ooxx"),isEqualNumXandO("xooxx"), isEqualNumXandO("ooxXm"),isEqualNumXandO("zpzpzpp"), isEqualNumXandO("zzoo"));
