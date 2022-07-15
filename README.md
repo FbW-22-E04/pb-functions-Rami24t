@@ -68,7 +68,7 @@ Examples:
 1) Accept a third argument for maximum age (just in case the snack company has a particular maximum age cut off). 
 2) Accept floating point values for amount per day and round the result (in case the snack company has some weird average calculation for amount per day).
 
-    * calcLifetimeSupply(32, 0.58, 65) ➞ "The snack company should provide you with 14,406 units, until you are a ripe old age of 65. Happy snacking!"
+    * calcLifetimeSupply(32, 0.58, 65) ➞ "The snack company should provide you with 6,991 units, until you are a ripe old age of 65. Happy snacking!"
 
 **9. Where's Waldo?**
 Create a function that takes a string and returns true if Waldo is found, and false if he's not.
